@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: table;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.row {
+  display: table-row;
+  height: 50%;
+}
+
+.row:nth-child(1) {
+  background-color: #eee;
+}
+
+.row:nth-child(2) {
+  background-color: #ddd;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+#hard {
+  border: 3px solid black;
+  width: 30%;
+  height: 75%;
+}
+
+.form {
+  border: 3px solid black;
+  width: 50%;
+  height: 75%;
+}
+
+ #bottom {
+  display: flex;
+  }
