@@ -37,9 +37,32 @@ h1, h2, h3 {
 .form {
   border: 3px solid black;
   width: 50%;
-  height: 75%;
+  height: 100%;
 }
 
  #bottom {
   display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+  #heading {
+    order: 0;
+    align-self: flex-start;
   }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
