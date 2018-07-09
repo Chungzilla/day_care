@@ -7,13 +7,26 @@
 </head>
 <body>
 	<h1>Kicking & Screaming Day Care</h1>
-	<div class="row">
+	<div class="row" id="scrolling-wrapper">
 		<h2>Day Care Info</h2>
 
-			<section id="hard">
+			<section id="hard" class="card">
 				<h3>Day Care Name</h3>
+					<div>
+						<button class="collapsible">+ Children</button>
+						<div class="content">
+						  <p>Kids go here!</p>
+						</div>
+					</div>
+					<div>
+						Day Care Status:
 
+					</div>
 
+					<div>
+						# of Workers:
+
+					</div>
 			</section>
 	</div>
 
@@ -23,10 +36,50 @@
 			<section class="form" id="addDaycare">
 				<h3>Add Day Care</h3>
 
+					<div class="col">
+						<div>
+							<label for="daycare-name">Daycare Name: </label>
+							<input type="text" id="daycare-name">	
+						</div>
+						<div>
+							<label for="daycare-status">Daycare Status:
+								<select>
+									<option value="status">Select</option>
+									<option value="status">Clean</option>
+									<option value="status">Dirty</option>
+								</select>
+							</label>
+						<div>
+							<label for="numWork-input"># of Workers: </label>
+							<input type="text" id="numWork-input">
+							<button id="daycare-button">Add Daycare</button>
+						</div>	
+						</div>
+
 			</section>
 
 			<section class="form" id="addChild">
 				<h3>Add Child</h3>
+
+					<div class="col">
+						<div>
+							<label for="daycare-name">Daycare Name: </label>
+							<input type="text" id="daycare-name">	
+						</div>
+						<div>
+							<label for="daycare-status">Daycare Status:
+								<select>
+									<option value="status">Select</option>
+									<option value="status">Clean</option>
+									<option value="status">Dirty</option>
+								</select>
+							</label>
+						<div>
+							<label for="numWork-input"># of Workers: </label>
+							<input type="text" id="numWork-input">
+							<button id="daycare-button">Add Daycare</button>
+						</div>	
+						</div>
 
 			</section>
 	</div>
