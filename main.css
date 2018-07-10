@@ -76,10 +76,13 @@ h1, h2, h3 {
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
+  padding: 10px;
 }
 
   .card {
     flex: 0 0 auto;
+    padding: 10px;
+    margin: 0px 10px;
   }
 }
 
