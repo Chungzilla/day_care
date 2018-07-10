@@ -70,7 +70,7 @@ h1, h2, h3 {
     background-color: #f1f1f1;
 }
 
-#scrolling-wrapper {
+#wrapper {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
