@@ -24,9 +24,6 @@ body {
   background-color: #ddd;
 }
 
-h1, h2, h3 {
-  text-align: center;
-}
 
 #hard {
   border: 3px solid black;
@@ -40,7 +37,7 @@ h1, h2, h3 {
   height: 100%;
 }
 
- #bottom {
+ #lower-container {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -70,7 +67,7 @@ h1, h2, h3 {
     background-color: #f1f1f1;
 }
 
-#wrapper {
+#upper-container{
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
