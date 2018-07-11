@@ -25,29 +25,6 @@ body {
 }
 
 
-#hard {
-  border: 3px solid black;
-  width: 30%;
-  height: 75%;
-}
-
-section {
-  border: 3px solid black;
-  width: 50%;
-  height: 100%;
-}
-
-#lower-container{
-  display: flex;
-  border-top: 1px solid black;
-}
-
-
-.active, .collapsible:hover {
-    background-color: #555;
-}
-
-
 #upper-container{
   display: flex;
   border-top: 1px solid black;
@@ -66,3 +43,15 @@ label, input{
   flex-basis: 10%;
   margin: 5px 0;
 }
+
+form {
+  border: 3px solid black;
+  width: 50%;
+  height: 100%;
+}
+
+#lower-container{
+  display: flex;
+  border-top: 1px solid black;
+}
+

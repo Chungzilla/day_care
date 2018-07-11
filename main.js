@@ -1,35 +1,20 @@
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    });
-}
-
-
 let allDaycareCounter = 0;
 let upperContainer = document.getElementById('upper-container');
-let lowerContainer = document.getElementById('lower-container');
+let lowerContainer = document.getElementById('lower-container')
 
 
 //Code below will define the daycare class and its params
-class Daycare {
-    constructor(name, status, numWorkers, id){
+class Daycare{
+    constructor(name, cleanStatus, numWorkers, id){
         this.name = name;
-        this.status = status;
+        this.cleanStatus = cleanStatus;
         this.numWorkers = numWorkers;
         this.daycareChildren = []
+        this.id = id;
     }
-//Need to be able to add new daycares
-    addDaycare (daycare){
-        this.daycareChildren.push(child)
+//Need to be able to add children
+    addChild(child){
+        this.dayCareChildren.push(child)
     }
 
 //Need to be able to render daycares added
@@ -50,14 +35,12 @@ class Daycare {
         id.innerText = "Daycare ID#:" + this.id
 
         let numWorkers = document.createElement('h4')
-        numWorkers.innerText = "# of Workers" + this.numWorkers
+        numWorkers.innerText = "# of Workers" + this.numWorkers;
 
 
         //Need to append list of children to div of their assigned daycare 
         let childrenContainer = document.createElement('section')
         childrenContainer.classList.add('children-list')
-
-        //Create a remove child button..
         for(let child of this.daycareChildren){
             //..each time an instance of a child is created/added to array
 
@@ -79,17 +62,18 @@ class Daycare {
 
         //Append the children container section to daycare container div; 
         // append each new daycare to upper container; update daycare counter
-        newContainer.appendChild(childrenContainer)
-        upperContainer.appendChild(newContainer)
+        newContainer.append(name, status, id, numWorkers, childrenContainer);
+        upperContainer.appendChild(newContainer);
         allDaycareCounter++;
 
     }
 }
 
 //Need to be able to add a Child to daycares
-let daycareForm = document.getElementById('daycare-button')
+let daycareForm = document.getElementById('daycare-form')
 
-daycareForm.addEventListener('click', () => {
+daycareForm.addEventListener('submit', (e) => {
+    e.preventDefault();
     let nameInput = document.getElementById('daycare-name').value
     let daycareStatus = document.getElementById('daycare-status').value
     let numWorkers = document.getElementById('numofworkers'.value)
@@ -100,7 +84,7 @@ daycareForm.addEventListener('click', () => {
     }else{
         daycareStatus = false;
     }
-    let newDaycare = new Daycare(nameInput, daycareStatus, numofworkers, allDaycareCounter+1);
+    let newDaycare = new Daycare(nameInput, daycareStatus, numWorkers, allDaycareCounter+1);
     daycareStore.push(newDaycare);
     newDaycare.renderDaycare();
 })

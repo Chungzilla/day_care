@@ -7,63 +7,52 @@
 </head>
 <body>
 	<h1>Kicking & Screaming Day Care</h1>
-	<div class="row" id="upper-container">
+	<section class="row" id="upper-container">
 
 		
-	</div>
+	</section>
+	<section class="row" id="lower-container">
+		<form id="daycare-form">
+			<h3>Add Day Care</h3>
+						<label for="daycare-name">Daycare Name: </label>
+						<input type="text" id="daycare-name">	
+						<label for="daycare-status">Daycare Status:
+							<select id="daycare-status">
+								<option value="clean">Clean</option>
+								<option value="dirty">Dirty</option>
+							</select>
+						</label>
+					
+						<label for="numofworkers"># of Workers: </label>
+						<input type="text" id="numofworkers">
 
-	<div class="row" id="lower-container">
+						<button id="daycare-button">Add Daycare</button>
+				
+		</form>
 
-			<section class="form" id="daycare-form">
-				<h3>Add Day Care</h3>
+		<form id="child-form">
+			<h3>Add Child</h3>
+				
+						<label for="daycare-name">Daycare Name: </label>
+						<input type="text" id="daycare-name">	
+					
+						<label for="daycare-status">Daycare Status:
+							<select>
+								<option value="status">Select</option>
+								<option value="status">Clean</option>
+								<option value="status">Dirty</option>
+							</select>
+						</label>
+					
+						<label for="workers-input"># of Workers: </label>
+						<input type="text" id="workers-input">
+						<button id="daycare-button">Add Daycare</button>
+					<	
+				
+		</form>
+	</section>
+	
 
-					<div class="col">
-						<div>
-							<label for="daycare-name">Daycare Name: </label>
-							<input type="text" id="daycare-name">	
-						</div>
-						<div>
-							<label for="daycare-status">Daycare Status:
-								<select id="daycare-status">
-									<option value="clean">Clean</option>
-									<option value="dirty">Dirty</option>
-								</select>
-							</label>
-						<div>
-							<label for="numofworkers"># of Workers: </label>
-							<input type="text" id="numofworkers">
-
-							<button id="daycare-button">Add Daycare</button>
-						</div>	
-						</div>
-			</section>
-
-			<section class="form" id="child-form">
-				<h3>Add Child</h3>
-
-					<div class="col">
-						<div>
-							<label for="daycare-name">Daycare Name: </label>
-							<input type="text" id="daycare-name">	
-						</div>
-						<div>
-							<label for="daycare-status">Daycare Status:
-								<select>
-									<option value="status">Select</option>
-									<option value="status">Clean</option>
-									<option value="status">Dirty</option>
-								</select>
-							</label>
-						<div>
-							<label for="workers-input"># of Workers: </label>
-							<input type="text" id="workers-input">
-							<button id="daycare-button">Add Daycare</button>
-						</div>	
-						</div>
-
-			</section>
-	</div>
-	</div>
 
 <script type="text/javascript" src="main.js"></script>
 </body>
