@@ -14,6 +14,80 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
+let allDaycareCounter = 0;
+let upperContainer = document.getElementById('upper-container');
+let lowerContainer = document.getElementById('lower-container');
+
+
+//Code below will define the daycare class and its params
+class Daycare {
+    constructor(name, status, numWorkers, id){
+        this.name = name;
+        this.status = status;
+        this.numWorkers = numWorkers;
+        this.daycareChildren = []
+    }
+//Need to be able to add new daycares
+    addDaycare (daycare){
+        this.daycareChildren.push(child)
+    }
+
+//Need to be able to render daycares added
+    renderDaycare(){
+        //Need to create a new div to contain the new daycares in the upper container
+        let newContainer = document.createElement.Id(div);
+        newContainer.classList.add('daycare')
+        newContainer.id = this.id
+
+        //Need to create elements with Daycare properties to store in the new div
+        let name = document.createElement('h2')
+        name.innerText = "Daycare Name:" + this.name
+
+        let status = document.createElement('h3')
+        status.innerText = "Status" + this.status
+
+        let id = document.createElement('h4')
+        id.innerText = "Daycare ID#:" + this.id
+
+        let numWorkers = document.createElement('h4')
+        numworkers.innerText = "# of Workers" + this.numWorkers
+
+
+        //Need to append list of children to div of their assigned daycare 
+        let childrenContainer = document.createElementId('section')
+        childrenContainer.classList.add('children-list')
+
+        //Create a remove child button..
+        for(let child of daycareChildren){
+            //..each time an instance of a child is created/added to array
+
+            let wrapper = document.createElement('div')
+            wrapper.classList.add('child-element')
+
+            let removeButton = document.createElementID('button')
+            removeButton.innerText = "Remove"
+            removeButton.classList.add('remove-child')
+
+            //Grab and wrap name of child assigned and remove button
+            let childWrapper = document.createElementId('span')
+            childWrapper.innerText = child.name
+
+            //append the child wrapper and button to wrapper; append wrapper to children container section
+            wrapper.append(childWrapper, removeButton)
+            childrenContainer.append(wrapper)
+        }
+
+        //Append the children container section to daycare container div; 
+        // append each new daycare to upper container; update daycare counter
+        newContainer.appendChild(childrenContainer)
+        upperContainer.appendChild(newContainer)
+        allDaycareCounter++;
+
+    }
+
+//Need to be able to add a Child to daycares
+
+}
 
 
 
