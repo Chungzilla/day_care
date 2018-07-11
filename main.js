@@ -41,10 +41,10 @@ class Daycare {
 
         //Need to create elements with Daycare properties to store in the new div
         let name = document.createElement('h2')
-        name.innerText = "Daycare Name:" + this.name
+        name.innerText = "Daycare Name:" + this.name;
 
         let status = document.createElement('h3')
-        status.innerText = "Status" + this.status
+        status.innerText = 'Status:' + (this.cleanStatus ? "Clean" : "Not Clean");
 
         let id = document.createElement('h4')
         id.innerText = "Daycare ID#:" + this.id
@@ -87,7 +87,7 @@ class Daycare {
 }
 
 //Need to be able to add a Child to daycares
-let daycareForm = document.getElementById('daycare-form')
+let daycareForm = document.getElementById('daycare-button')
 
 daycareForm.addEventListener('click', () => {
     let nameInput = document.getElementById('daycare-name').value
