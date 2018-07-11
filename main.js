@@ -35,7 +35,7 @@ class Daycare {
 //Need to be able to render daycares added
     renderDaycare(){
         //Need to create a new div to contain the new daycares in the upper container
-        let newContainer = document.createElement.Id(div);
+        let newContainer = document.createElement('div');
         newContainer.classList.add('daycare')
         newContainer.id = this.id
 
@@ -50,15 +50,15 @@ class Daycare {
         id.innerText = "Daycare ID#:" + this.id
 
         let numWorkers = document.createElement('h4')
-        numworkers.innerText = "# of Workers" + this.numWorkers
+        numWorkers.innerText = "# of Workers" + this.numWorkers
 
 
         //Need to append list of children to div of their assigned daycare 
-        let childrenContainer = document.createElementId('section')
+        let childrenContainer = document.createElement('section')
         childrenContainer.classList.add('children-list')
 
         //Create a remove child button..
-        for(let child of daycareChildren){
+        for(let child of this.daycareChildren){
             //..each time an instance of a child is created/added to array
 
             let wrapper = document.createElement('div')
@@ -84,71 +84,50 @@ class Daycare {
         allDaycareCounter++;
 
     }
-
-//Need to be able to add a Child to daycares
-
 }
 
+//Need to be able to add a Child to daycares
+let daycareForm = document.getElementById('daycare-form')
 
+daycareForm.addEventListener('click', () => {
+    let nameInput = document.getElementById('daycare-name').value
+    let daycareStatus = document.getElementById('daycare-status').value
+    let numWorkers = document.getElementById('numofworkers'.value)
 
-// //.               OLD CODE
+    //Assign true or false to clean status
+    if(daycareStatus === "Clean"){
+        dayCareStatus = true;  
+    }else{
+        daycareStatus = false;
+    }
+    let newDaycare = new Daycare(nameInput, daycareStatus, numofworkers, allDaycareCounter+1);
+    daycareStore.push(newDaycare);
+    newDaycare.renderDaycare();
+})
 
-// class Daycare {
-// 	constructor(name, status, workers, id){
-// 		this.name = name;
-// 		this.status = status;
-// 		this.workers = work;
-// 		this.id = id;
-// 		this.childArray = []
-// 	}
-
-// 	adDaycare (daycare){
-// 		//add new daycare to scroll
-	
-// 		// creates new div for each daycare
-// 	let toScroll = 
-
-// 	addChild(child){
-// 		//add the child to the array
-//     this.childArray.push(child);
-// 		// call the function to update children in daycare
-// 	}
-
-// 	renderDayCare(){
-// 		//Creating the card div
-// 		let newDaycare = document.createElement('div');
-// 		newDaycare.classList.add('card')
-// 		newDaycare.id = this.id
-
-// 		let name = document.createElement('h1')
-// 		name.inneText = 'Daycare Name:' + this.name;
-// 	}
-// 	}
-// }
-
-
-//  class Child {
-//   constructor(name, age, hometown){
-//     this.name = name;
-//     this.age = age;
-//     this.hometown = hometown;
-//     this.daycareId = daycareId
-//   }
-// }
+const removeChildButton = document.getElementsByClassName('remove-child')
 
 
 
-// let daycareName = document.getElementById('daycare-name-input')
-// let daycareStatus = document.getElementById('daycare-status-input')
-// let daycareWorkers = document.getElementById('workers-input')
-// let daycareButton = document.getElementById('daycare-button')
+//Hardcoded content on load
 
-// let newDaycare = new Daycare ('', '', '')
+// let jazzy = new Child('Jazzy', 8, 'Queens', false);
+// let tudii = new Child('Tudi', 7, 'Boston', true);
+
+// let carl = new Child('Carl', 8, 'Manhattan', true);
+// let rick = new Child('Rick', 1, 'Brooklyn', true);
+
+let rugDaycare = new Daycare('Rugrats Inn', true, 5, 1);
+let mattyDaycare = new Daycare('Miss Matties Kiddy Corner', false, 7, 2)
 
 
+// bobDaycare.addChild(bob);
+// bobDaycare.addChild(david)
 
-// daycareButton.addEventListener('click', function() {
-//     //grabbing the text of the add daycare input box
-//     let scoreToAdd = Number(scoreInput.value);
-//     //using the addScore method of myStudent to add it to the array property of that students assignment scores
-// 	myStudent.addScore(scoreToAdd);
+// johnDaycare.addChild(carl);
+// johnDaycare.addChild(rick);
+
+let daycareStore = [rugDaycare, mattyDaycare]
+
+rugDaycare.renderDaycare();
+mattyDaycare.renderDaycare();
