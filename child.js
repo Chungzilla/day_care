@@ -1,8 +1,14 @@
 //Need to define child class
 
 class Child{
-    constructor(name, age, hometown, )
+    constructor(name, age, hometown, rude){
+        this.name = name;
+        this.age = age;
+        thos.homtown = hometown;
+        this.rude = rude;
+    }
 }
+
 
 
 
