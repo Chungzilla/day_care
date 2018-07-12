@@ -24,52 +24,27 @@ body {
   background-color: #ddd;
 }
 
-h1, h2, h3 {
-  text-align: center;
-}
 
-#hard {
-  border: 3px solid black;
-  width: 30%;
-  height: 75%;
-}
-
-.form {
-  border: 3px solid black;
-  width: 50%;
-  height: 100%;
-}
-
- #bottom {
+#upper-container{
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  border-top: 1px solid black;
 }
 
 
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
+
+.daycare{
+  border:1px solid black;
+  padding:20px;
+  margin:20px;
 }
 
-.active, .collapsible:hover {
-    background-color: #555;
+label, input{
+  display:block;
+  flex-basis: 10%;
+  margin: 5px 0;
 }
 
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-
+<<<<<<< HEAD
 #scrolling-wrapper {
   display: flex;
   flex-direction: row;
@@ -84,7 +59,16 @@ h1, h2, h3 {
     padding: 10px;
     margin: 0px 10px;
   }
+=======
+form {
+  border: 3px solid black;
+  width: 50%;
+  height: 100%;
 }
 
-
+#lower-container{
+  display: flex;
+  border-top: 1px solid black;
+>>>>>>> master
+}
 
