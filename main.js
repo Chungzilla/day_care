@@ -26,16 +26,16 @@ class Daycare{
 
         //Need to create elements with Daycare properties to store in the new div
         let name = document.createElement('h2')
-        name.innerText = "Daycare Name:" + this.name;
+        name.innerText = "Daycare Name: " + this.name;
 
         let status = document.createElement('h3')
-        status.innerText = 'Status:' + (this.cleanStatus ? "Clean" : "Not Clean");
+        status.innerText = 'Status: ' + (this.cleanStatus ? "Clean" : "Not Clean");
 
         let id = document.createElement('h4')
-        id.innerText = "Daycare ID#:" + this.id
+        id.innerText = "Daycare ID#: " + this.id
 
         let numWorkers = document.createElement('h4')
-        numWorkers.innerText = "# of Workers" + this.numWorkers;
+        numWorkers.innerText = "# of Workers: " + this.numWorkers;
 
 
         //Need to append list of children to div of their assigned daycare 
@@ -76,7 +76,7 @@ daycareForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let nameInput = document.getElementById('daycare-name').value
     let daycareStatus = document.getElementById('daycare-status').value
-    let numWorkers = document.getElementById('numofworkers'.value)
+    let numWorkers = document.getElementById('numofworkers').value
 
     //Assign true or false to clean status
     if(daycareStatus === "Clean"){
