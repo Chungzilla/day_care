@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<title>Kicking & Screaming App</title>
 </head>
+
 <body>
 	<h1>Kicking & Screaming Day Care</h1>
 	<section class="row" id="upper-container">
@@ -16,18 +17,18 @@
 			<h3>Add Day Care</h3>
 						<label for="daycare-name">Daycare Name: </label>
 						<input type="text" id="daycare-name">	
-						<label for="daycare-status">Daycare Status:
+
+						<label for="daycare-status">Daycare Status:	</label>
 							<select id="daycare-status">
 								<option value="clean">Clean</option>
 								<option value="dirty">Dirty</option>
 							</select>
-						</label>
+					
 					
 						<label for="numofworkers"># of Workers: </label>
 						<input type="text" id="numofworkers">
 
-						<button id="daycare-button">Add Daycare</button>
-				
+						<input type="submit" value="Add Daycare">	
 		</form>
 
 		<form id="child-form">
@@ -58,8 +59,10 @@
 	</section>
 	
 
+<script type="text/javascript" src="daycare.js"></script>
+<script type="text/javascript" src="child.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
-<script type="text/javascript" src="main.js daycare.js child.js"></script>
 
 </body>
 </html>

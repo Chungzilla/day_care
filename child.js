@@ -4,7 +4,7 @@ class Child{
     constructor(name, age, hometown, rude){
         this.name = name;
         this.age = age;
-        thos.homtown = hometown;
+        this.homtown = hometown;
         this.rude = rude;
     }
 }

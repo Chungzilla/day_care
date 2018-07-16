@@ -14,7 +14,7 @@ class Daycare{
     }
 //Need to be able to add children
     addChild(child){
-        this.dayCareChildren.push(child)
+        this.daycareChildren.push(child)
     }
 
 //Need to be able to render daycares added
@@ -76,10 +76,10 @@ daycareForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let nameInput = document.getElementById('daycare-name').value
     let daycareStatus = document.getElementById('daycare-status').value
-    let numWorkers = document.getElementById('numofworkers').value
+    let numWorkers = parseInt(document.getElementById('numofworkers').value)
 
     //Assign true or false to clean status
-    if(daycareStatus === "Clean"){
+    if(daycareStatus === "clean"){
         dayCareStatus = true;  
     }else{
         daycareStatus = false;
@@ -89,4 +89,4 @@ daycareForm.addEventListener('submit', (e) => {
     newDaycare.renderDaycare();
 })
 
-const removeChildButton = document.getElementsByClassName('remove-child')
+// const removeChildButton = document.getElementsByClassName('remove-child')
